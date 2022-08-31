@@ -7,6 +7,7 @@ import CartItem from './CartItem'
 
 function Cart(props) {
   const cartCtx = useContext(CartContext)
+  const hasItems = cartCtx.items.length > 0;
   const cartItemAddHandler = (item) => {
     cartCtx.addItem(item);
   }
@@ -36,7 +37,7 @@ function Cart(props) {
         </div>
         <div className={classes.actions}>
             <button className={classes['button--alt']} onClick ={props.hideCart}>Close</button>
-            <button className={classes.button}>Order</button>
+            {hasItems && <button className={classes.button}>Order</button>}
         </div>
     </Modal>
   )
