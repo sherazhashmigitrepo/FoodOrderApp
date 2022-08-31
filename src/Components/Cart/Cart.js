@@ -3,7 +3,7 @@ import Modal from '../UI/Modal'
 import classes from './Cart.module.css'
 
 function Cart(props) {
-    const cartItems = [{id:'e1',name:'Chiken Krahi',Price:33.56}].map(item => <span>{item.name}</span>)
+    const cartItems = [{id:'e1' ,name:'Chiken Krahi',Price:33.56}].map(item => <span>{item.name}</span>)
   return (
     <Modal hideCart = {props.hideCart}>
         {cartItems}
