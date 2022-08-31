@@ -7,7 +7,7 @@ const cartReducer = (state , action) => {
     const updatedTotalAmount = state.totalAmount + action.item.amount * action.item.price; 
     return{
       items : updatedItems,
-      amount : updatedTotalAmount
+      totalAmount : updatedTotalAmount
     }
   }
   return {items : [], totalAmount: 0}
@@ -30,7 +30,7 @@ function CartProvider(props) {
     }
     const cartContext = {
         items : state.items,
-        totalAmount:state.amount,
+        totalAmount:state.totalAmount,
         addItem : addItemToCartHandler,
         removeItem : removeItemFromCartHandler
     }

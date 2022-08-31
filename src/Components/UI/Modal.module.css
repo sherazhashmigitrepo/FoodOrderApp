@@ -9,10 +9,10 @@
 }
 .overlay{
     position: fixed;
-    top: 40vh;
+    top: 20vh;
     left: 15%;
     width: 70%;
-    max-height: 50vh;
+    max-height: 80vh;
     background-color: white;
     border-radius: 1rem;
     padding: 1rem;
