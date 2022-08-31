@@ -1,0 +1,25 @@
+li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem 1rem 2rem;
+    margin: 1rem 0rem;
+    border-bottom: 1px solid brown;
+    height: 8rem;
+}
+.description{
+    font-style: italic;
+    font-family: sans-serif;
+}
+.price{
+    font-weight: 600;
+    color: rgb(235, 172, 0);
+    margin-top: .5rem;
+}
+.form{
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

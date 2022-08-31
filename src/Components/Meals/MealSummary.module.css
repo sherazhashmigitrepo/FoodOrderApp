@@ -1,0 +1,9 @@
+.summary{
+    width: 70%;
+    height: 40vh;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(43, 43, 43);
+    color: rgb(206, 206, 206);
+    padding: .2rem 2rem;
+}

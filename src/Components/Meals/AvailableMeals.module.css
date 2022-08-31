@@ -1,0 +1,10 @@
+.meals{
+    width: 90%;
+    height: auto;
+    background-color: rgb(241, 241, 241);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
