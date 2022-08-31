@@ -12,7 +12,9 @@
     top: 20vh;
     left: 15%;
     width: 70%;
-    max-height: 80vh;
+    max-height: 60vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
     background-color: white;
     border-radius: 1rem;
     padding: 1rem;

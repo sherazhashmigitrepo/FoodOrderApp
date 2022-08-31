@@ -1,0 +1,33 @@
+
+.control{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.control.invalid{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.control.invalid label{
+    color: red;
+}
+.control.invalid input{
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.404);
+}
+.control label{
+    font-weight: bold;
+}
+form button{
+    padding: .1rem 1rem;
+    margin-right: 1rem;
+    border: 1px solid rgb(218, 148, 56);
+    cursor: pointer;
+    border-radius: .3rem;
+}
+form button:hover,
+form button:active{
+    background-color: rgb(196, 122, 25);
+    color: white;
+}

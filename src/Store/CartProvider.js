@@ -50,21 +50,20 @@ const cartReducer = (state , action) => {
         updatedItems[existingItemIndex] = updatedItem;
      }
     
-    
+     
     //result after  execution of AddItem function part
-    return{
-      items : updatedItems,
-      totalAmount : updatedTotalAmount
-    }    
+    return defaultValues ;
     }
-
+    if(action.type === 'CLEAR'){
+      return defaultValues;
+     }
   //Default return of cart reducer
-  return {
-    items : [],
-    totalAmount: 0
-  };
+  return defaultValues;
 }
-
+const defaultValues = {
+  items : [],
+  totalAmount: 0
+}
 
 
 
@@ -72,10 +71,7 @@ const cartReducer = (state , action) => {
 //CartProvider main function to be export
 function CartProvider(props) {
 
-  const defaultValues = {
-    items : [],
-    totalAmount: 0
-  }
+  
 
   const [state, dispatch] = useReducer(cartReducer, defaultValues)
 
@@ -85,11 +81,15 @@ function CartProvider(props) {
     const removeItemFromCartHandler = (id) =>{
       dispatch({type : 'removeItem' , id : id})
     }
+    const clearCartHandler = () =>{
+      dispatch({type : 'CLEAR'})
+    }
     const cartContext = {
         items : state.items,
         totalAmount:state.totalAmount,
         addItem : addItemToCartHandler,
-        removeItem : removeItemFromCartHandler
+        removeItem : removeItemFromCartHandler,
+        clearCart : clearCartHandler
     }
   return (
     <CartContext.Provider value = {cartContext}>

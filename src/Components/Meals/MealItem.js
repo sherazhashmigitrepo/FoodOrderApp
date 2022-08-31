@@ -6,14 +6,14 @@ import MealItemForm from './MealItemForm'
 
 function MealItem(props) {
     const ctx = useContext(CartContext)
-    const price = props.price.toFixed(2)
-    const addToCartHandler=(amount)=>{
+    const price = `Rs${props.price.toFixed(2)}`
+    const addToCartHandler = (amount) => {
         ctx.addItem({
-            key : props.id,
-            id:props.id,
-            name:props.name,
-            price:props.price,
-            amount:amount
+            key: props.id,
+            id: props.id,
+            name: props.name,
+            price: props.price,
+            amount: amount
         })
     }
     return (
@@ -26,11 +26,11 @@ function MealItem(props) {
                     {props.description}
                 </div>
                 <div className={classes.price}>
-                   $ {price}
+                    {price}
                 </div>
             </div>
             <div className={classes.form}>
-                <MealItemForm onAddCart = {addToCartHandler}/>
+                <MealItemForm onAddCart={addToCartHandler} />
             </div>
         </li>
     )

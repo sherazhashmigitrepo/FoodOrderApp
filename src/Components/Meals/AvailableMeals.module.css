@@ -1,4 +1,4 @@
-.meals{
+.meals {
     width: 90%;
     height: auto;
     background-color: rgb(241, 241, 241);
@@ -7,4 +7,18 @@
     flex-direction: column;
     justify-content: space-between;
     margin-top: 3rem;
+}
+
+.loading {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin: 1rem 0;
+}
+
+.error {
+    color: rgb(255, 60, 0);
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0;
 }
